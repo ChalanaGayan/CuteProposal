@@ -1,0 +1,93 @@
+@keyframes magnifyStamp {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(2);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.gif_container {
+  display: flex;
+  justify-content: center;
+}
+
+.gif_container img {
+  transition: transform 0.5s ease;
+}
+
+.animate img {
+  animation: magnifyStamp 1s ease forwards;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffc0cb;
+  font-family: "Nunito", sans-serif;
+}
+
+#noButton {
+  position: absolute;
+  margin-left: 150px;
+  transition: 0.5s;
+}
+
+#yesButton {
+  position: absolute;
+  margin-right: 150px;
+}
+
+.header_text {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #fff;
+  color: #ff69b4;
+  padding: 15px 32px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+@media only screen and (max-width: 320px) {
+  .header_text {
+    font-size: 20px;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #000000;
+  font-size: 12px;
+}
